@@ -1,0 +1,97 @@
+body{
+    background-color:rgb(154, 81, 118);
+}
+
+body,button,input{
+    font-family: "Gantari", Calibri, Tahoma, sans-serif;
+}
+
+main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 5rem;
+}
+
+.flex-container{
+    background-color: lavenderblush;
+    background-image: linear-gradient(rgb(127, 64, 85), rgb(127, 64, 85)), linear-gradient(rgb(127, 64, 85), rgb(127, 64, 85));
+    background-size: 100% 2px, 2px 100%;
+    background-position: 0 15%, 5% 0;
+    background-repeat: no-repeat;
+
+    padding: 5%;
+    width: 50%;
+    box-shadow: 0rem 0.8rem 0.5rem rgb(0, 0, 0);
+    border-radius: 2rem 2rem 2rem 2rem;
+    position: relative;
+    animation-name: fading;
+    animation-duration: 4s;
+}
+
+.guess-section{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+#guess-input{
+    outline: none; /* REMOVE BUTTON DEFAULT FOCUS BEHAVIOR */
+    border: 1px solid rgb(182, 27, 71);
+    padding: 0.5rem;
+    transition: 0.5s;
+}
+
+#guess-input:focus{
+    border: 1px solid rgb(122, 17, 47);
+    background-color: rgb(255, 195, 228);
+}
+
+#guess-btn, #tryAgain-btn{
+    border: none;
+    color: white;
+    font-weight: bold;
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    outline: none;
+    background-color: rgb(122, 17, 47);
+    transition: 0.5s;
+}
+
+#guess-btn:hover, #tryAgain-btn:hover{
+    background-color: rgb(180, 32, 74);
+}
+
+footer{
+    row-gap: 1rem;
+    flex-direction: column;
+    display: flex;
+}
+
+#guess-input:disabled{
+    border: 1px solid black;
+    background-color: rgb(196, 196, 196);
+}
+
+#guess-btn:disabled{
+    background-color: rgb(196, 196, 196);
+}
+
+#tryAgain-btn{
+    display: none;
+}
+
+footer{
+    padding-top: 1rem;
+}
+
+@keyframes fading{
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
